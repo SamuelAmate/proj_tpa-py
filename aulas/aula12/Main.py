@@ -1,11 +1,11 @@
 import Pessoa
 import os
-
-os.system('cls')
+def limpar():os.system('cls')
 
 res = 0
+limpar()
 def pergunta():
-    res = int(input("Deseja cadastrar uma nova pessoa? 1 - SIM ou 0 - NÂO:"))
+    res = int(input("Deseja cadastrar uma nova pessoa? 1 - SIM ou 0 - NÂO: "))
     return res
 
 cadastro = []
@@ -23,6 +23,14 @@ while(res == 1):
 def mostrar():
     print("{:<4}{:<10}{:<7}{:<10}{:<7}"
           .format("Nº","Nome","Idade","Cargo","Salário"))
+    y = 1
     for x in cadastro:
         print("{:<4}{:<10}{:<7}{:<10}{:<7}"
-              .format(x,x.nome,x.idade,x.cargo,x.salario))
+              .format(y,
+                  x.get_nome(),
+                  x.get_idade(),
+                  x.get_cargo(),
+                  x.get_salario()
+              ))
+        y =+1
+mostrar()
