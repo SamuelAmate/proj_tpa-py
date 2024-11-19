@@ -18,7 +18,7 @@ while(res == 1):
     salario = float(input("Digite o salario da pessoa: "))
     
     cadastro.append(Pessoa.Pessoa(nome,idade,cargo,salario))
-    pergunta()
+    res = pergunta()
 
 def mostrar():
     print("{:<4}{:<10}{:<7}{:<10}{:<7}"
