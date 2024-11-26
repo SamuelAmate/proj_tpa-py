@@ -65,20 +65,17 @@ remover()
 mostrar()
 
 def interface():
-    linha1 = int(input("Digite qual função quer acessar: "))
-    opcao1 = int(input("Escolha as opções: \n1 - Cadastrar\n2- Idade\n3 - cargo\n4 - Salario\n"))
-    if(opcao1==1):
-        nome = str(input("Digite o novo nome: "))
-        cadastro[linha].set_nome(nome)
-    elif(opcao1==2):
-        idade = str(input("Digite a nova idade: "))
-        cadastro[linha].set_idade(idade)
-    elif(opcao1==3):
-        cargo = str(input("Digite o novo cargo: "))
-        cadastro[linha].set_cargo(cargo)
-    elif(opcao1==4):
-        salario = str(input("Digite o novo salário: "))
-        cadastro[linha].set_salario(salario)
+    opcao = int(input("Escolha as opções: \n1 - Cadastrar\n2- Alterar\n3 - Remover\n4 - Mostrar\n5 - Encerrar\n"))
+    if(opcao==1):
+        cadastrar()
+    elif(opcao==2):
+        alterar()
+    elif(opcao==3):
+        remover()
+    elif(opcao==4):
+        mostrar()
+    elif(opcao==5):
+        return
     else:
         print("Valor Incoreto!")
-alterar()
+interface()
