@@ -14,7 +14,7 @@ class Pessoa:
     def get_idade(self):
         return self.idade
     
-    def set_nome(self, idade):
+    def set_idade(self, idade):
         self.idade = idade
 
     def get_cargo(self):
